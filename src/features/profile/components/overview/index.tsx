@@ -1,13 +1,11 @@
-import { GlobeIcon, MapPinIcon, MarsIcon, VenusIcon } from "lucide-react";
+import { MapPinIcon } from "lucide-react";
 
 import { USER } from "@/features/profile/data/user";
-import { urlToName } from "@/utils/url";
 
 import { Panel, PanelContent } from "../panel";
 import { EmailItem } from "./email-item";
 import { IntroItem } from "./intro-item";
 import { JobItem } from "./job-item";
-import { PhoneItem } from "./phone-item";
 
 export function Overview() {
   return (
@@ -28,20 +26,20 @@ export function Overview() {
 
         <IntroItem icon={MapPinIcon} content={USER.address} />
 
-        <PhoneItem phoneNumber={USER.phoneNumber} />
+        {/* <PhoneItem phoneNumber={USER.phoneNumber} /> */}
 
         <EmailItem email={USER.email} />
 
-        <IntroItem
+        {/* <IntroItem
           icon={GlobeIcon}
           content={urlToName(USER.website)}
           href={USER.website}
-        />
+        /> */}
 
-        <IntroItem
+        {/* <IntroItem
           icon={USER.gender === "male" ? MarsIcon : VenusIcon}
           content={USER.pronouns}
-        />
+        /> */}
       </PanelContent>
     </Panel>
   );

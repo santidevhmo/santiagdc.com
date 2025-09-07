@@ -14,8 +14,8 @@ export async function GET() {
     .addName(USER.lastName, USER.firstName)
     .addPhoneNumber(decodePhoneNumber(USER.phoneNumber))
     .addAddress(USER.address)
-    .addEmail(decodeEmail(USER.email))
-    .addURL(USER.website);
+    .addEmail(decodeEmail(USER.email));
+  // .addURL(USER.website);
 
   const photo = await getVCardPhoto(USER.avatar);
   if (photo) {
